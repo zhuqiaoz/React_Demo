@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        function HelloName(props){
+            return <h2> Hello,{props.title}  </h2>
+        }
+        // const elesp = <HelloName title="ps" />
+        function App(){
+            return (
+                <div>
+                    <HelloName title="ps" />,
+                    <HelloName title="ps2" />,
+                    <HelloName title="ps3" /> 
+                </div>
+            )
+        }
+        ReactDOM.render(
+            // elesp,
+            <App />,
+            document.getElementById('app')
+        )
+    </script>
+</body>
+</html>
