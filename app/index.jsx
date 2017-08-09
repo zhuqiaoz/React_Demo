@@ -4,9 +4,13 @@ import { render } from 'react-dom'
 
 import './static/css/common.less'
 
-class Hello extends ReactDOM.render{
+class Hello extends React.Component{
     render(){
-        return <h1> Hello world</h1>
+        return (
+        <div>
+            <h1>Hello world</h1>
+        </div>
+        )
     }
 }
 
