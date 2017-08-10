@@ -4,14 +4,11 @@ import { render } from 'react-dom'
 
 import './static/css/common.less'
 
-class Hello extends React.Component{
-    render(){
-        return (
-        <div>
-            <h1>Hello world</h1>
-        </div>
-        )
-    }
+import Hello from './containers/Hello/index.jsx'
+
+import Perf from 'react-addons-perf'
+if(__DEV__){
+    window.Perf = Perf
 }
 
 render(
