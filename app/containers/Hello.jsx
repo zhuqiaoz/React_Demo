@@ -2,11 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import * as userinfoActions from '../../actions/userinfo.js'
+import * as userinfoActions from '../actions/userinfo'
 
-import A from '../../compontents/A'
-import B from '../../compontents/B'
-import C from '../../compontents/C'
+import A from '../components/A'
+import B from '../components/B'
+import C from '../components/C'
 
 class Hello extends React.Component {
     render() {

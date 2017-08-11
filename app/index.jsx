@@ -1,21 +1,21 @@
 import React from 'react'
 import { render } from 'react-dom'
-
-import { hashHistory } from 'react-router'
-
-import RouterMap from './router/routerMap.jsx'
-
-
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore'
 
 import './static/css/common.less'
 
+// 引用并执行 redux-demo
+// import fn from './redux-demo.js'
+// fn()
 
-// import Perf from 'react-addons-perf'
-// if(__DEV__){
-//     window.Perf = Perf
-// }
+import Hello from './containers/Hello'
+
+const store = configureStore()
 
 render(
-    <RouterMap history={hashHistory} />,
+    <Provider store={store}>
+        <Hello/>
+    </Provider>,
     document.getElementById('app')
 )
