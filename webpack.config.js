@@ -4,9 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-// var nodeModulesPath = path.resolve(__dirname, 'node_modules')
-// console.log(process.env.NODE_ENV)
-
 module.exports = {
     entry: path.resolve(__dirname, 'app/index.jsx'),
     output: {
@@ -56,17 +53,17 @@ module.exports = {
         })
     ],
 
-    // devServer: {
-    //     proxy: {
-    //       '/api': {
-    //         target: 'http://localhost:3000',
-    //         secure: false
-    //       }
-    //     },
-    //     contentBase: "./public", //本地服务器所加载的页面所在的目录
-    //     colors: true, //终端中输出结果为彩色
-    //     historyApiFallback: true, //不跳转
-    //     inline: true, //实时刷新
-    //     hot: true  // 使用热加载插件 HotModuleReplacementPlugin
-    // }
+    devServer: {
+        proxy: {
+          '/api': {
+            target: 'http://localhost:3000',
+            secure: false
+          }
+        },
+        contentBase: "./public", //本地服务器所加载的页面所在的目录
+        colors: true, //终端中输出结果为彩色
+        historyApiFallback: true, //不跳转
+        inline: true, //实时刷新
+        hot: true  // 使用热加载插件 HotModuleReplacementPlugin
+    }
 }

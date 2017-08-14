@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set NODE_ENV=dev && webpack-dev-server --progress --colors",
+    "start": "set NODE_ENV=dev && webpack-dev-server --progress --colors --hot",
     "mock": "node --harmony ./mock/server.js",
     "build": "rd /s/q /build && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --colors"
   },
@@ -28,6 +28,7 @@
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.7.0",
+    "react-swipe": "^5.0.5",
     "redux": "^3.5.2",
     "whatwg-fetch": "^1.0.0"
   },
